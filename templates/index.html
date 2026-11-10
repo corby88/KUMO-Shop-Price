@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUMO Shop Price</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6fa;
+            color: #202938;
+        }
+
+        header {
+            background: #17243a;
+            color: white;
+            padding: 22px 35px;
+        }
+
+        header h1 { margin: 0; font-size: 25px; }
+        header p { margin: 7px 0 0; color: #b9c6d9; }
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .status {
+            background: white;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 25px;
+            border: 1px solid #e1e6ee;
+        }
+
+        .indicator {
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            background: #e0a52b;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e1e6ee;
+            border-radius: 10px;
+            padding: 24px;
+        }
+
+        .card h2 { font-size: 17px; margin-top: 0; }
+        .number { font-size: 30px; font-weight: bold; color: #2456a6; }
+        .description { color: #778397; font-size: 13px; }
+
+        .shop-section {
+            margin-top: 25px;
+            background: white;
+            border: 1px solid #e1e6ee;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .shop-section h2 { margin-top: 0; }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d5dce7;
+            border-radius: 7px;
+            background: white;
+            font-size: 15px;
+        }
+
+        @media (max-width: 700px) {
+            .cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>KUMO SHOP PRICE</h1>
+        <p>TCPOS · KUMO API 8.1</p>
+    </header>
+
+    <main>
+        <section class="status">
+            <span class="indicator"></span>
+            <strong>Connessione KUMO:</strong>
+            <span>Non ancora configurata</span>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h2>Shop</h2>
+                <div class="number">—</div>
+                <div class="description">Totale shop disponibili</div>
+            </div>
+
+            <div class="card">
+                <h2>Articoli</h2>
+                <div class="number">—</div>
+                <div class="description">Articoli disponibili</div>
+            </div>
+
+            <div class="card">
+                <h2>Menu</h2>
+                <div class="number">—</div>
+                <div class="description">Menu disponibili</div>
+            </div>
+        </section>
+
+        <section class="shop-section">
+            <h2>Selezione shop</h2>
+            <select disabled>
+                <option>In attesa del collegamento a KUMO...</option>
+            </select>
+        </section>
+
+        <section class="shop-section">
+            <h2>Consultazione prezzi</h2>
+            <p>Seleziona uno shop per consultare:</p>
+            <ul>
+                <li>Price Level e Price Level Fallbacks</li>
+                <li>Prezzi degli articoli</li>
+                <li>Prezzi dei menu</li>
+                <li>Listino effettivamente applicato</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
